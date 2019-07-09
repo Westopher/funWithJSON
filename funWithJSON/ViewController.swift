@@ -12,13 +12,10 @@ class ViewController: UITableViewController {
 
     var petitions = [Petition]()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
         
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
