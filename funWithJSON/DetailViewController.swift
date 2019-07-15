@@ -23,6 +23,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         
         titleLabel.text = "\(titleLabelToDisplay ?? "No Title To Display")"
+        sigCountLabel.text = "\(sigCountLabelToDisplay ?? "No Title To Display")"
+        bodyLabel.text = "\(bodyLabelToDisplay ?? "No Title To Display")"
         super.viewDidLoad()
 
     

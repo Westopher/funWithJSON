@@ -37,16 +37,14 @@ class ViewController: UITableViewController {
         }
     }
     
-    
-    
+    //prepare for segue and assign values in detailVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailSegue" {
             if let detailVC = segue.destination as? DetailViewController, let ip = tableView.indexPathForSelectedRow {
-            let petitionsInfo = petitions
             
             detailVC.titleLabelToDisplay = petitions[ip.row].title
-            //detailVC.sigCountLabel = "testing"
-            //detailVC.bodyLabel = "testing3"
+            detailVC.sigCountLabelToDisplay = "Signature Count: \(petitions[ip.row].signatureCount)"
+            detailVC.bodyLabelToDisplay = petitions[ip.row].body
                 
             }
         }
