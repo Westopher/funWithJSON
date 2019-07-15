@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +40,9 @@ class ViewController: UITableViewController {
         if segue.identifier == "DetailSegue" {
             if let detailVC = segue.destination as? DetailViewController, let ip = tableView.indexPathForSelectedRow {
             
-            detailVC.titleLabelToDisplay = petitions[ip.row].title
+            detailVC.titleLabelToDisplay = "Title: \(petitions[ip.row].title)"
             detailVC.sigCountLabelToDisplay = "Signature Count: \(petitions[ip.row].signatureCount)"
-            detailVC.bodyLabelToDisplay = petitions[ip.row].body
+            detailVC.bodyLabelToDisplay = "Petition Text: \(petitions[ip.row].body)"
                 
             }
         }
