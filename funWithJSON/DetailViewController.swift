@@ -11,6 +11,10 @@ import WebKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sigCountLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 

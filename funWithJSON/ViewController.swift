@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    var petitions = [Petition]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,8 @@ class ViewController: UITableViewController {
         
     }
     
+    //variable for parse function
+    var petitions = [Petition]()
     
     func parse(json: Data) {
         let decoder = JSONDecoder()
@@ -32,6 +34,19 @@ class ViewController: UITableViewController {
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
             tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailSegue" {
+            if let detailVC = segue.destination as? DetailViewController, let ip = tableView.indexPathForSelectedRow {
+            let petitionsInfo = petitions
+            
+            detailVC.sigCountLabel.text = 
+            detailVC.titleLabel.text
+            detailVC.bodyLabel.text
+                
+            }
         }
     }
     
