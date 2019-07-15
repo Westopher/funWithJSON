@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //build the url and pass the data from the url into the parse 
+        //build the url and pass the data from the url into the parse
         let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
