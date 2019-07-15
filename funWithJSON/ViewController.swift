@@ -44,7 +44,7 @@ class ViewController: UITableViewController {
             if let detailVC = segue.destination as? DetailViewController, let ip = tableView.indexPathForSelectedRow {
             let petitionsInfo = petitions
             
-            detailVC.titleLabelToDisplay = "testing2"
+            detailVC.titleLabelToDisplay = petitions[ip.row].title
             //detailVC.sigCountLabel = "testing"
             //detailVC.bodyLabel = "testing3"
                 
