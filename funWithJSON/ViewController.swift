@@ -37,14 +37,16 @@ class ViewController: UITableViewController {
         }
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailSegue" {
             if let detailVC = segue.destination as? DetailViewController, let ip = tableView.indexPathForSelectedRow {
             let petitionsInfo = petitions
             
-            detailVC.sigCountLabel.text = 
-            detailVC.titleLabel.text
-            detailVC.bodyLabel.text
+            detailVC.titleLabelToDisplay = "testing2"
+            //detailVC.sigCountLabel = "testing"
+            //detailVC.bodyLabel = "testing3"
                 
             }
         }

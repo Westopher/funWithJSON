@@ -15,7 +15,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var sigCountLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
    
+    var titleLabelToDisplay: String?
+    var sigCountLabelToDisplay: String?
+    var bodyLabelToDisplay: String?
+    
+    
     override func viewDidLoad() {
+        
+        titleLabel.text = "\(titleLabelToDisplay ?? "No Title To Display")"
         super.viewDidLoad()
 
     
